@@ -1,0 +1,105 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/982cbbeedc.js" crossorigin="anonymous"></script>
+		{% tailwind_css %}
+</head>
+<body class="bg-white font-serif leading-normal tracking-normal">
+
+<div class="header shadow-md w-full bg-white p-2">
+
+    <div class="flex items-center px-2">
+        <div class="img-container">
+            <img src="{% static 'img/profile_placeholder.jpg' %}" class="rounded-full max-w-10">
+        </div>
+
+        <div class="profile w-full mx-3">
+            <h1 class="font-bold">Cahya Mustofa</h1>
+            <p>521041114</p>
+        </div>
+
+        <button><i class="fa-solid fa-xmark fa-2x"></i></button>
+
+    </div>
+</div>
+
+<div class="grid grid-cols-5">
+    <div class="sidemenu bg-green-700 h-screen">
+        <ul>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:beranda' %}" class="m-5 mt-5">Beranda</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:nilai' %}" class="m-5">Nilai</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:buatPresensi' %}" class="m-5">Buat Presensi</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:cekTotalKehadiran' %}" class="m-5">Kehadiran</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="sidemenu col-span-4 h-full p-8">
+        <h1 class="font-bold">Jadwal Mengajar</h1>
+
+        <div class="listJadwal grid grid-cols-2 gap-5">
+
+            <div class="card flex bg-slate-100 shadow-lg rounded px-3 py-5 items-center">
+                <h1 class="font-bold">09:22</h1>
+
+                <div class="mapel mx-3">
+                    <h2 class="font-bold">KElas XI TKJ</h2>
+                    <p>Bahasa Indonesia</p>
+                </div>
+            </div>
+
+            <div class="card flex bg-slate-100 shadow-lg  rounded px-3 py-5 items-center">
+                <h1 class="font-bold">09:22</h1>
+
+                <div class="mapel mx-3">
+                    <h2 class="font-bold">KElas XI TKJ</h2>
+                    <p>Bahasa Indonesia</p>
+                </div>
+            </div>
+
+            <div class="card flex bg-slate-100 shadow-lg  rounded px-3 py-5 items-center">
+                <h1 class="font-bold">09:22</h1>
+
+                <div class="mapel mx-3">
+                    <h2 class="font-bold">KElas XI TKJ</h2>
+                    <p>Bahasa Indonesia</p>
+                </div>
+            </div>
+
+            <div class="card flex bg-slate-100 shadow-lg  rounded px-3 py-5 items-center">
+                <h1 class="font-bold">09:22</h1>
+
+                <div class="mapel mx-3">
+                    <h2 class="font-bold">KElas XI TKJ</h2>
+                    <p>Bahasa Indonesia</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

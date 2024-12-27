@@ -1,0 +1,46 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
+
+	<body class="bg-white font-serif leading-normal tracking-normal">
+
+    <div class="grid grid-cols-5 grid-flow-row-dense grid-rows-2">
+        <div class="col-span-4 place-items-center">
+            <h1 class="text-green-800 mt-8 text-4xl">SISTEM INFORMASI AKADEMIK</h1>
+            <h1 class="text-green-800 text-4xl">SMKN 3 YOGYAKARTA</h1>
+            <img src="{% static 'img/login_placeholder.png' %}">
+
+
+        </div>
+
+        <div class="bg-green-700 p-3 place-items-center">
+            <img src="{% static 'img/logo_smk.png' %}" class="w-1/2 mt-5">
+            <h1 class="font-bold text-white my-3">Login</h1>
+
+            <form action="" method="post">
+                {% csrf_token %}
+
+                <input type="text" name="userId" placeholder="Nomor Induk" class="w-full rounded-xl border border-gray focus:border-green-600 focus:outline-none">
+                <input type="password" name="password" placeholder="Password" class="w-full rounded-xl border border-gray focus:border-green-600 focus:outline-none my-3">
+
+                 <button type="button" onclick="location.href ='{% url 'SIA_Tailwind:beranda' %}'" class=" w-full border border-gray rounded-xl bg-yellow-300 hover:bg-background hover:border-purple py-2 my-3">Login</button>
+
+            </form>
+
+
+
+        </div>
+
+
+    </div>
+
+
+	</body>
+</html>
