@@ -1,0 +1,143 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/982cbbeedc.js" crossorigin="anonymous"></script>
+		{% tailwind_css %}
+</head>
+<body class="bg-white font-serif leading-normal tracking-normal">
+
+<div class="header shadow-md w-full bg-white p-2">
+
+    <div class="flex items-center px-2">
+        <div class="img-container">
+            <img src="{% static 'img/profile_placeholder.jpg' %}" class="rounded-full max-w-10">
+        </div>
+
+        <div class="profile w-full mx-3">
+            <h1 class="font-bold">Cahya Mustofa</h1>
+            <p>521041114</p>
+        </div>
+
+        <button><i class="fa-solid fa-xmark fa-2x"></i></button>
+
+    </div>
+</div>
+
+<div class="grid grid-cols-5 w-full">
+    <div class="sidemenu bg-green-700 h-screen">
+        <ul>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:beranda' %}" class="m-5 mt-5">Data Siswa</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:nilai' %}" class="m-5">Data Guru</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:buatPresensi' %}" class="m-5">Data Mapel</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main h-full col-span-4 w-full p-8">
+
+        <form action="#" method="post">
+            {% csrf_token %}
+            <div class="grid grid-cols-2 w-full">
+                <h1 class="font-bold">Input Data Siswa</h1>
+             </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="InputBox">
+                    <p>Nama</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+                <div class="placeholder"></div>
+                <div class="InputBox">
+                    <p>Tanggal Lahir</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+                <div class="InputBox">
+                    <p>Tempat Lahir</p>
+                    <input type="password" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+
+                <div class="InputBox">
+                    <p>NIK</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+
+                <div class="InputBox">
+                    <p>Agama</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+                <div class="InputBox col-span-2">
+                    <p>Alamat</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+
+                <div class="InputBox col-span-2">
+                    <p>Email</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+
+                <div class="InputBox col-span-2">
+                    <p>Telepon</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none my-2">
+                </div>
+
+                <div class="InputBox">
+                    <p>Wali Kelas (Opsional)</p>
+                    <select name="assign" class="border-gray focus:border-purple rounded w-full">
+                        <option value="" disabled selected hidden>Pilih Kelas</option>
+                        <option>10 A</option>
+                        <option>11 A</option>
+                        <option>12 A</option>
+                    </select>
+                </div>
+
+                <div class="InputBox">
+                    <p>Ketua Prodi (Opsional)</p>
+                    <select name="assign" class="border-gray focus:border-purple rounded w-full">
+                        <option value="" disabled selected hidden>Pilih Jurusan</option>
+                        <option>Teknik Komputer Jaringan</option>
+                        <option>Teknik MEdia</option>
+                        <option>Teknik Sipil</option>
+                    </select>
+                </div>
+
+                <div class="InputBox">
+                    <p>Status Admin</p>
+                    <input type="checkbox">
+                </div>
+
+
+            </div>
+            <button class="rounded bg-green-700 text-white py-2 px-3 hover:bg-green-500 mt-10">Simpan</button>
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

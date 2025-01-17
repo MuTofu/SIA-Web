@@ -1,0 +1,165 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Django Tailwind</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/982cbbeedc.js" crossorigin="anonymous"></script>
+		{% tailwind_css %}
+</head>
+<body class="bg-white font-serif leading-normal tracking-normal">
+
+<div class="header shadow-md w-full bg-white p-2">
+
+    <div class="flex items-center px-2">
+        <div class="img-container">
+            <img src="{% static 'img/profile_placeholder.jpg' %}" class="rounded-full max-w-10">
+        </div>
+
+        <div class="profile w-full mx-3">
+            <h1 class="font-bold">Cahya Mustofa</h1>
+            <p>521041114</p>
+        </div>
+
+        <button><i class="fa-solid fa-xmark fa-2x"></i></button>
+
+    </div>
+</div>
+
+<div class="grid grid-cols-5 w-full">
+    <div class="sidemenu bg-green-700 h-screen">
+        <ul>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:datasiswa' %}" class="m-5 mt-5">Data Siswa</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:dataguru' %}" class="m-5">Data Guru</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+            <li class="font-bold text-white">
+                <a href="{% url 'SIA_Tailwind:buatPresensi' %}" class="m-5">Data Mapel</a>
+                <div class="line h-0.5 bg-slate-300 my-3"></div>
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="main h-full col-span-4 w-full p-8">
+        <div class="grid grid-cols-2 w-full">
+                <h1 class="font-bold">Data Mata Pelajaran</h1>
+                <button class="rounded bg-green-700 text-white justify-self-end py-2 px-3 hover:bg-green-500" onclick="location.href ='{% url 'SIA_Tailwind:inputdatamapel' %}'">Input Data</button>
+             </div>
+
+        <form action="#" method="post">
+            {% csrf_token %}
+
+
+            <div class="search grid grid-cols-4 mt-12 gap-10 items-end">
+
+                <div class="InputBox col-span-2">
+                    <p>Nama Mata Pelajaran</p>
+                    <input type="text" name="password"  class="w-full rounded border border-gray focus:border-green-600 focus:outline-none mt-2">
+                </div>
+
+                <button class="rounded bg-slate-600 text-white justify-self-start w-1/3 h-1/2 hover:bg-slate-700">Cari</button>
+
+            </div>
+            <div class="line h-0.5 bg-slate-300 my-5"></div>
+
+            <ul>
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+                <li>
+                    <div class="my-1 items-center">
+                        <div class="flex gap-10 w-full cursor-pointer hover:bg-slate-400 w-full py-2" onclick="location.href ='{% url 'SIA_Tailwind:inputdatasiswa' %}'">
+
+                            <P>111122333</P>
+                            <P>Bahasa Indoensia</P>
+                        </div>
+                    </div>
+                    <div class="line h-0.5 bg-slate-300"></div>
+                </li>
+
+
+
+
+
+
+            </ul>
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

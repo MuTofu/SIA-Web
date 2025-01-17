@@ -19,3 +19,21 @@ def cekDetailKehadiran(requests):
 
 def cekTotalKehadiran(requests):
     return render(requests, "TotalKehadiranGuruPage.html")
+
+def inputDataSiswa(requests):
+    return render(requests, "InputDataSiswaAdmin.html")
+
+def inputDataGuru(requests):
+    return render(requests, "InputDataGuruAdmin.html")
+
+def inputDataMapel(request):
+    return render(request, "InputDataMapelAdmin.html")
+
+def dataSiswa(requests):
+    return render(requests, "DataSiswaAdmin.html")
+
+def dataGuru(requests):
+    return render(requests, "DataGuruAdmin.html")
+
+def dataMapel(requests):
+    return render(requests, "DataMapelAdmin.html")
