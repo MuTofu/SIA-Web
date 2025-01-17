@@ -32,15 +32,15 @@
     <div class="sidemenu bg-green-700 h-screen">
         <ul>
             <li class="font-bold text-white">
-                <a href="{% url 'SIA_Tailwind:beranda' %}" class="m-5 mt-5">Data Siswa</a>
+                <a href="{% url 'SIA_Tailwind:datasiswa' %}" class="m-5 mt-5">Data Siswa</a>
                 <div class="line h-0.5 bg-slate-300 my-3"></div>
             </li>
             <li class="font-bold text-white">
-                <a href="{% url 'SIA_Tailwind:nilai' %}" class="m-5">Data Guru</a>
+                <a href="{% url 'SIA_Tailwind:dataguru' %}" class="m-5">Data Guru</a>
                 <div class="line h-0.5 bg-slate-300 my-3"></div>
             </li>
             <li class="font-bold text-white">
-                <a href="{% url 'SIA_Tailwind:buatPresensi' %}" class="m-5">Data Mapel</a>
+                <a href="{% url 'SIA_Tailwind:datamapel' %}" class="m-5">Data Mapel</a>
                 <div class="line h-0.5 bg-slate-300 my-3"></div>
             </li>
         </ul>
@@ -96,12 +96,13 @@
 
 
             </div>
-            <button class="rounded bg-green-700 text-white py-2 px-3 hover:bg-green-500 mt-10">Simpan</button>
+
 
 
 
 
         </form>
+        <button class="rounded bg-green-700 text-white py-2 px-3 hover:bg-green-500 mt-10" onclick="location.href ='{% url 'SIA_Tailwind:datamapel' %}'">Simpan</button>
 
 
 

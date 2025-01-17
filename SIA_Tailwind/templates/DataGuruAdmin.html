@@ -48,13 +48,14 @@
 
 
     <div class="main h-full col-span-4 w-full p-8">
+        <div class="grid grid-cols-2 w-full">
+                <h1 class="font-bold">Data Guru</h1>
+                <button class="rounded bg-green-700 text-white justify-self-end py-2 px-3 hover:bg-green-500" onclick="location.href ='{% url 'SIA_Tailwind:inputdataguru' %}'">Input Data</button>
+             </div>
 
         <form action="#" method="post">
             {% csrf_token %}
-            <div class="grid grid-cols-2 w-full">
-                <h1 class="font-bold">Data Guru</h1>
-                <button class="rounded bg-green-700 text-white justify-self-end py-2 px-3 hover:bg-green-500">Input Data</button>
-             </div>
+
 
             <div class="search grid grid-cols-4 mt-12 gap-10 items-end">
 
